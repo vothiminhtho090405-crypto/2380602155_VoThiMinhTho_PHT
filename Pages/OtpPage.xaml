@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VoThiMinhTho_2380602155_PHT.OtpPage"
+    Title="Xác thực OTP"
+    BackgroundColor="#F5F7FB">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="24"
+            Spacing="14"
+            VerticalOptions="Center">
+
+            <Label
+                Text="🔐"
+                FontSize="48"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Nhập mã OTP"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="#172554"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                x:Name="InfoLabel"
+                Text="Vui lòng nhập mã OTP được gửi đến email của bạn."
+                TextColor="#64748B"
+                HorizontalTextAlignment="Center" />
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#E2E8F0"
+                StrokeThickness="1"
+                Padding="16">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Entry
+                        x:Name="OtpEntry"
+                        Placeholder="Nhập mã OTP gồm 6 số"
+                        Keyboard="Numeric"
+                        MaxLength="6"
+                        FontSize="24"
+                        HorizontalTextAlignment="Center" />
+
+                    <Button
+                        Text="Xác nhận"
+                        Clicked="OnVerify"
+                        BackgroundColor="#2563EB"
+                        TextColor="White"
+                        CornerRadius="12"
+                        HeightRequest="48" />
+
+                    <Button
+                        Text="Gửi lại mã"
+                        BackgroundColor="Transparent"
+                        TextColor="#2563EB"
+                        Clicked="OnResend" />
+
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

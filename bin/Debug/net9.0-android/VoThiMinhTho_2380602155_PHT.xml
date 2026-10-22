@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VoThiMinhTho_2380602155_PHT</name>
+    </assembly>
+    <members>
+        <member name="T:VoThiMinhTho_2380602155_PHT.ClassesPage">
+            <summary>
+            Admin: xem tất cả lớp.
+            Giảng viên: chỉ xem lớp do mình phụ trách.
+            Hỗ trợ mở, thêm, sửa và xóa lớp học.
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.MainTabs">
+            <summary>
+            Phân quyền: mỗi vai trò hiển thị bộ tab tương ứng.
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.SessionDetailPage">
+            <summary>
+            Hiển thị mã QR, danh sách có mặt/vắng
+            và các thao tác quản lý buổi điểm danh.
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.SessionsPage">
+            <summary>
+            Giảng viên/Admin: quản lý buổi điểm danh
+            và danh sách sinh viên của một lớp.
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.StudentHomePage">
+            <summary>
+            Sinh viên: xem lớp đã tham gia,
+            tham gia lớp bằng mã và rời lớp.
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.UsersPage">
+            <summary>
+            Admin: quản lý người dùng.
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.Api">
+            <summary>HttpClient dùng chung để gọi Web API.</summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.ApiConn">
+            <summary>Thay thế kết nối SQLite: các trang vẫn gọi Db.C.Table&lt;T&gt;()... nhưng dữ liệu đến từ API.</summary>
+        </member>
+        <member name="M:VoThiMinhTho_2380602155_PHT.Db.Prepare(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Kiểm tra dữ liệu đăng ký.
+            Trả về (user chưa lưu, lỗi).
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.MotionMeter">
+            <summary>
+            Đo chuyển động bằng gia tốc kế:
+            trả về độ lệch so với trọng lực (đơn vị g).
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.StackPage">
+            <summary>
+            Trang cơ bản: ScrollView + VerticalStackLayout,
+            tự tải lại dữ liệu mỗi lần hiện.
+            </summary>
+        </member>
+        <member name="T:VoThiMinhTho_2380602155_PHT.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>

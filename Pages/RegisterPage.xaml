@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VoThiMinhTho_2380602155_PHT.RegisterPage"
+    Title="Đăng ký tài khoản"
+    BackgroundColor="#F5F7FB">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="12">
+
+            <Label
+                Text="Tạo tài khoản mới"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="#172554" />
+
+            <Label
+                Text="Mã OTP xác minh sẽ được gửi đến email của bạn."
+                TextColor="#64748B"
+                FontSize="13" />
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#E2E8F0"
+                StrokeThickness="1"
+                Padding="16">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Entry
+                        x:Name="NameEntry"
+                        Placeholder="Họ và tên"
+                        MaxLength="100" />
+
+                    <Entry
+                        x:Name="EmailEntry"
+                        Placeholder="Email"
+                        Keyboard="Email"
+                        ClearButtonVisibility="WhileEditing" />
+
+                    <Entry
+                        x:Name="UserEntry"
+                        Placeholder="Tên đăng nhập (không dấu, không khoảng trắng)"
+                        MaxLength="50" />
+
+                    <Entry
+                        x:Name="CodeEntry"
+                        Placeholder="Mã số (MSSV / MSGV)"
+                        MaxLength="30" />
+
+                    <Picker
+                        x:Name="RolePicker"
+                        Title="Bạn là"
+                        SelectedIndex="0">
+
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Sinh viên</x:String>
+                                <x:String>Giảng viên</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Entry
+                        x:Name="PassEntry"
+                        Placeholder="Mật khẩu (tối thiểu 6 ký tự)"
+                        IsPassword="True"
+                        MaxLength="100" />
+
+                    <Entry
+                        x:Name="ConfirmEntry"
+                        Placeholder="Nhập lại mật khẩu"
+                        IsPassword="True"
+                        MaxLength="100" />
+
+                    <Button
+                        Text="Đăng ký &amp; nhận mã OTP"
+                        Clicked="OnRegister"
+                        BackgroundColor="#2563EB"
+                        TextColor="White"
+                        CornerRadius="12"
+                        HeightRequest="48" />
+
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

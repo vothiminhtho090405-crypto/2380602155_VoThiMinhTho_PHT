@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VoThiMinhTho_2380602155_PHT.LoginPage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F5F7FB">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="24"
+            Spacing="14"
+            VerticalOptions="Center">
+
+            <Border
+                BackgroundColor="#2563EB"
+                StrokeThickness="0"
+                HeightRequest="84"
+                WidthRequest="84"
+                HorizontalOptions="Center">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="42" />
+                </Border.StrokeShape>
+
+                <Label
+                    Text="✓"
+                    FontSize="44"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </Border>
+
+            <Label
+                Text="Điểm danh sinh viên"
+                FontSize="26"
+                FontAttributes="Bold"
+                TextColor="#172554"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Đăng nhập để tiếp tục"
+                TextColor="#64748B"
+                HorizontalTextAlignment="Center" />
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#E2E8F0"
+                StrokeThickness="1"
+                Padding="16">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Entry
+                        x:Name="UserEntry"
+                        Placeholder="Tên đăng nhập"
+                        Keyboard="Default"
+                        ClearButtonVisibility="WhileEditing" />
+
+                    <Entry
+                        x:Name="PassEntry"
+                        Placeholder="Mật khẩu"
+                        IsPassword="True" />
+
+                    <Button
+                        Text="Đăng nhập"
+                        Clicked="OnLogin"
+                        BackgroundColor="#2563EB"
+                        TextColor="White"
+                        CornerRadius="12"
+                        HeightRequest="48" />
+
+                    <ActivityIndicator
+                        x:Name="Busy"
+                        IsRunning="False"
+                        IsVisible="False"
+                        Color="#2563EB" />
+
+                    <Label
+                        Text="Sau bước này, bạn sẽ nhận mã OTP qua email."
+                        FontSize="12"
+                        TextColor="#64748B"
+                        HorizontalTextAlignment="Center" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button
+                Text="Chưa có tài khoản? Đăng ký ngay"
+                BackgroundColor="Transparent"
+                TextColor="#2563EB"
+                Clicked="OnRegister" />
+
+            <Label
+                Text="Tài khoản demo: admin / Admin@123 · gv1 / Gv@12345 · sv1 / Sv@12345"
+                FontSize="11"
+                TextColor="#64748B"
+                HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
